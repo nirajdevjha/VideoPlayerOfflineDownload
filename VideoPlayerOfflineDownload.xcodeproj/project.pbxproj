@@ -9,12 +9,29 @@
 /* Begin PBXBuildFile section */
 		4021E02625849313002CE97F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E02525849313002CE97F /* AppDelegate.swift */; };
 		4021E02825849313002CE97F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E02725849313002CE97F /* SceneDelegate.swift */; };
-		4021E02A25849313002CE97F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E02925849313002CE97F /* ViewController.swift */; };
+		4021E02A25849313002CE97F /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E02925849313002CE97F /* VideoListView.swift */; };
 		4021E02D25849313002CE97F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4021E02B25849313002CE97F /* Main.storyboard */; };
 		4021E03025849313002CE97F /* VideoPlayerOfflineDownload.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4021E02E25849313002CE97F /* VideoPlayerOfflineDownload.xcdatamodeld */; };
 		4021E03225849314002CE97F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E03125849314002CE97F /* Assets.xcassets */; };
 		4021E03525849314002CE97F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4021E03325849314002CE97F /* LaunchScreen.storyboard */; };
 		4021E04025849315002CE97F /* VideoPlayerOfflineDownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E03F25849315002CE97F /* VideoPlayerOfflineDownloadTests.swift */; };
+		4021E0532585C639002CE97F /* VideoListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0522585C639002CE97F /* VideoListProtocols.swift */; };
+		4021E0562585C992002CE97F /* VideoListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0552585C992002CE97F /* VideoListResponseModel.swift */; };
+		4021E0582585C9D2002CE97F /* VideoListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0572585C9D2002CE97F /* VideoListDataManager.swift */; };
+		4021E05A2585CC48002CE97F /* VideoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0592585CC48002CE97F /* VideoListPresenter.swift */; };
+		4021E05C2585CD83002CE97F /* VideoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E05B2585CD83002CE97F /* VideoListInteractor.swift */; };
+		4021E05E2585CEB3002CE97F /* VideoListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E05D2585CEB3002CE97F /* VideoListWireFrame.swift */; };
+		4021E0612585D3F7002CE97F /* VideoListCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0602585D3F7002CE97F /* VideoListCellBuilder.swift */; };
+		4021E0632585D5C6002CE97F /* VideoListCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0622585D5C6002CE97F /* VideoListCardPresenter.swift */; };
+		4021E0662585D7B2002CE97F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0652585D7B2002CE97F /* UIView+Extensions.swift */; };
+		4021E0682585D80E002CE97F /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0672585D80E002CE97F /* WebserviceManager.swift */; };
+		4021E06C258657E1002CE97F /* VideoListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E06A258657E1002CE97F /* VideoListTVC.swift */; };
+		4021E06D258657E1002CE97F /* VideoListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4021E06B258657E1002CE97F /* VideoListTVC.xib */; };
+		4021E06F25865893002CE97F /* VideoListCellModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E06E25865893002CE97F /* VideoListCellModels.swift */; };
+		4021E07125865FF9002CE97F /* EncoderDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E07025865FF9002CE97F /* EncoderDecoder.swift */; };
+		4021E078258670D6002CE97F /* VideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E077258670D6002CE97F /* VideoDetailVC.swift */; };
+		4021E07A25867135002CE97F /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E07925867135002CE97F /* VideoDetailViewModel.swift */; };
+		4021E07D25867195002CE97F /* VideoPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E07C25867195002CE97F /* VideoPlayerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +48,7 @@
 		4021E02225849313002CE97F /* VideoPlayerOfflineDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerOfflineDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4021E02525849313002CE97F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4021E02725849313002CE97F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4021E02925849313002CE97F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4021E02925849313002CE97F /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
 		4021E02C25849313002CE97F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4021E02F25849313002CE97F /* VideoPlayerOfflineDownload.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoPlayerOfflineDownload.xcdatamodel; sourceTree = "<group>"; };
 		4021E03125849314002CE97F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +57,23 @@
 		4021E03B25849315002CE97F /* VideoPlayerOfflineDownloadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerOfflineDownloadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4021E03F25849315002CE97F /* VideoPlayerOfflineDownloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerOfflineDownloadTests.swift; sourceTree = "<group>"; };
 		4021E04125849315002CE97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4021E0522585C639002CE97F /* VideoListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListProtocols.swift; sourceTree = "<group>"; };
+		4021E0552585C992002CE97F /* VideoListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListResponseModel.swift; sourceTree = "<group>"; };
+		4021E0572585C9D2002CE97F /* VideoListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListDataManager.swift; sourceTree = "<group>"; };
+		4021E0592585CC48002CE97F /* VideoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListPresenter.swift; sourceTree = "<group>"; };
+		4021E05B2585CD83002CE97F /* VideoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListInteractor.swift; sourceTree = "<group>"; };
+		4021E05D2585CEB3002CE97F /* VideoListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListWireFrame.swift; sourceTree = "<group>"; };
+		4021E0602585D3F7002CE97F /* VideoListCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCellBuilder.swift; sourceTree = "<group>"; };
+		4021E0622585D5C6002CE97F /* VideoListCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCardPresenter.swift; sourceTree = "<group>"; };
+		4021E0652585D7B2002CE97F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		4021E0672585D80E002CE97F /* WebserviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
+		4021E06A258657E1002CE97F /* VideoListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTVC.swift; sourceTree = "<group>"; };
+		4021E06B258657E1002CE97F /* VideoListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListTVC.xib; sourceTree = "<group>"; };
+		4021E06E25865893002CE97F /* VideoListCellModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCellModels.swift; sourceTree = "<group>"; };
+		4021E07025865FF9002CE97F /* EncoderDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderDecoder.swift; sourceTree = "<group>"; };
+		4021E077258670D6002CE97F /* VideoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailVC.swift; sourceTree = "<group>"; };
+		4021E07925867135002CE97F /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
+		4021E07C25867195002CE97F /* VideoPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +115,12 @@
 		4021E02425849313002CE97F /* VideoPlayerOfflineDownload */ = {
 			isa = PBXGroup;
 			children = (
+				4021E04A2585C511002CE97F /* Video List */,
+				4021E074258670A5002CE97F /* Video Detail */,
+				4021E0642585D795002CE97F /* Utilities */,
+				4021E0692585D813002CE97F /* WebServiceManager */,
 				4021E02525849313002CE97F /* AppDelegate.swift */,
 				4021E02725849313002CE97F /* SceneDelegate.swift */,
-				4021E02925849313002CE97F /* ViewController.swift */,
 				4021E02B25849313002CE97F /* Main.storyboard */,
 				4021E03125849314002CE97F /* Assets.xcassets */,
 				4021E03325849314002CE97F /* LaunchScreen.storyboard */,
@@ -100,6 +137,140 @@
 				4021E04125849315002CE97F /* Info.plist */,
 			);
 			path = VideoPlayerOfflineDownloadTests;
+			sourceTree = "<group>";
+		};
+		4021E04A2585C511002CE97F /* Video List */ = {
+			isa = PBXGroup;
+			children = (
+				4021E05F2585D3DE002CE97F /* Cell Builder */,
+				4021E0542585C987002CE97F /* Entity */,
+				4021E0502585C552002CE97F /* Protocols */,
+				4021E0512585C582002CE97F /* Presenter */,
+				4021E04B2585C51E002CE97F /* View */,
+				4021E04F2585C53E002CE97F /* Data manager */,
+				4021E04E2585C535002CE97F /* WireFrame */,
+				4021E04D2585C52E002CE97F /* Interactor */,
+			);
+			path = "Video List";
+			sourceTree = "<group>";
+		};
+		4021E04B2585C51E002CE97F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4021E02925849313002CE97F /* VideoListView.swift */,
+				4021E06A258657E1002CE97F /* VideoListTVC.swift */,
+				4021E06B258657E1002CE97F /* VideoListTVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4021E04D2585C52E002CE97F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4021E05B2585CD83002CE97F /* VideoListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4021E04E2585C535002CE97F /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				4021E05D2585CEB3002CE97F /* VideoListWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		4021E04F2585C53E002CE97F /* Data manager */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0572585C9D2002CE97F /* VideoListDataManager.swift */,
+			);
+			path = "Data manager";
+			sourceTree = "<group>";
+		};
+		4021E0502585C552002CE97F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0522585C639002CE97F /* VideoListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4021E0512585C582002CE97F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0592585CC48002CE97F /* VideoListPresenter.swift */,
+				4021E0622585D5C6002CE97F /* VideoListCardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4021E0542585C987002CE97F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0552585C992002CE97F /* VideoListResponseModel.swift */,
+				4021E06E25865893002CE97F /* VideoListCellModels.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4021E05F2585D3DE002CE97F /* Cell Builder */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0602585D3F7002CE97F /* VideoListCellBuilder.swift */,
+			);
+			path = "Cell Builder";
+			sourceTree = "<group>";
+		};
+		4021E0642585D795002CE97F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0652585D7B2002CE97F /* UIView+Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4021E0692585D813002CE97F /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0672585D80E002CE97F /* WebserviceManager.swift */,
+				4021E07025865FF9002CE97F /* EncoderDecoder.swift */,
+			);
+			path = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		4021E074258670A5002CE97F /* Video Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4021E07B25867184002CE97F /* PlayerItem */,
+				4021E076258670B3002CE97F /* View Model */,
+				4021E075258670AE002CE97F /* Controller */,
+			);
+			path = "Video Detail";
+			sourceTree = "<group>";
+		};
+		4021E075258670AE002CE97F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4021E077258670D6002CE97F /* VideoDetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4021E076258670B3002CE97F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4021E07925867135002CE97F /* VideoDetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4021E07B25867184002CE97F /* PlayerItem */ = {
+			isa = PBXGroup;
+			children = (
+				4021E07C25867195002CE97F /* VideoPlayerItem.swift */,
+			);
+			path = PlayerItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4021E03525849314002CE97F /* LaunchScreen.storyboard in Resources */,
+				4021E06D258657E1002CE97F /* VideoListTVC.xib in Resources */,
 				4021E03225849314002CE97F /* Assets.xcassets in Resources */,
 				4021E02D25849313002CE97F /* Main.storyboard in Resources */,
 			);
@@ -203,10 +375,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4021E02A25849313002CE97F /* ViewController.swift in Sources */,
+				4021E0682585D80E002CE97F /* WebserviceManager.swift in Sources */,
+				4021E02A25849313002CE97F /* VideoListView.swift in Sources */,
+				4021E0562585C992002CE97F /* VideoListResponseModel.swift in Sources */,
 				4021E02625849313002CE97F /* AppDelegate.swift in Sources */,
 				4021E03025849313002CE97F /* VideoPlayerOfflineDownload.xcdatamodeld in Sources */,
+				4021E0632585D5C6002CE97F /* VideoListCardPresenter.swift in Sources */,
+				4021E0662585D7B2002CE97F /* UIView+Extensions.swift in Sources */,
+				4021E078258670D6002CE97F /* VideoDetailVC.swift in Sources */,
+				4021E05E2585CEB3002CE97F /* VideoListWireFrame.swift in Sources */,
+				4021E0532585C639002CE97F /* VideoListProtocols.swift in Sources */,
+				4021E0612585D3F7002CE97F /* VideoListCellBuilder.swift in Sources */,
+				4021E06C258657E1002CE97F /* VideoListTVC.swift in Sources */,
+				4021E06F25865893002CE97F /* VideoListCellModels.swift in Sources */,
+				4021E05C2585CD83002CE97F /* VideoListInteractor.swift in Sources */,
+				4021E07A25867135002CE97F /* VideoDetailViewModel.swift in Sources */,
+				4021E07D25867195002CE97F /* VideoPlayerItem.swift in Sources */,
 				4021E02825849313002CE97F /* SceneDelegate.swift in Sources */,
+				4021E05A2585CC48002CE97F /* VideoListPresenter.swift in Sources */,
+				4021E07125865FF9002CE97F /* EncoderDecoder.swift in Sources */,
+				4021E0582585C9D2002CE97F /* VideoListDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
