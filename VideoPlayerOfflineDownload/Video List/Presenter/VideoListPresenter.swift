@@ -29,6 +29,7 @@ class VideoListPresenter: VideoListPresenterProtocol {
         
     }
     
+    
     func numberOfSections() -> Int {
         return sections.count
     }
@@ -56,12 +57,18 @@ class VideoListPresenter: VideoListPresenterProtocol {
         return sections[indexPath.section].cellModelForRowAtIndex(indexPath.row)
     }
     
+    func clearDownloadsTapped() {
+        interactor?.clearDownloadsTapped()
+    }
+    
     private func prepareSections(from videoModels: [VideoModel]?) {
-        guard let videoModels = videoModels,
+        guard let interactor = interactor,
+            let videoModels = videoModels,
             !videoModels.isEmpty else {
                 return
         }
-        let videoListCardPresenter = VideoListCardPresenter(sectionType: .videoList, section: 0, videoModels: videoModels, delegate: self)
+        sections.removeAll()
+        let videoListCardPresenter = VideoListCardPresenter(sectionType: .videoList, section: 0, videoModels: videoModels, delegate: self, cedric: interactor.cedric)
         sections.append(videoListCardPresenter)
     }
     
@@ -87,14 +94,23 @@ extension VideoListPresenter: VideoListInteractorOutputProtocol {
         }
         view?.showErrorMsg(message)
     }
+    
+    func reloadDataModels(_ response: VideoListResponseModel) {
+        prepareSections(from: response)
+        view?.reloadPage()
+    }
 }
 
 extension VideoListPresenter: VideoListSectionProtocol {
     func openVideoDetail(video: VideoModel) {
-        guard let view = view, let interactor = interactor else {
+        guard let view = view else {
             return
         }
         let videoDetailVM = VideoDetailViewModel(videoModel: video)
         wireFrame?.openVideoDetail(view: view, viewModel: videoDetailVM)
+    }
+    
+    func startDownload(with videoModel: VideoModel, resource: DownloadResource) {
+        interactor?.addVideoForDownload(video: videoModel, resource: resource)
     }
 }

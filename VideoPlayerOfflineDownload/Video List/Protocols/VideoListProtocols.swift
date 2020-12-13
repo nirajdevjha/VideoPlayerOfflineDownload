@@ -12,6 +12,7 @@ import UIKit
 //MARK:- SECTION PROTOCOLS
 protocol VideoListSectionProtocol: class {
     func openVideoDetail(video: VideoModel)
+    func startDownload(with videoModel: VideoModel, resource: DownloadResource)
 }
 
 enum VideoListSectionType: String {
@@ -90,19 +91,24 @@ protocol VideoListPresenterProtocol: VideoListCardDataSource {
     func viewDidLoad()
     func viewWillAppear()
     func viewWillDisappear()
+    func clearDownloadsTapped()
 }
 
 //MARK:- INTERACTOR PROTOCOLS
 protocol VideoListInteractorInputProtocol: class {
     var presenter: VideoListInteractorOutputProtocol? { get set }
     var remoteDatamanager: VideoListDataManagerProtocol? { get set }
+    var cedric: Cedric { get }
     func fetchVideoListAPI()
+    func addVideoForDownload(video: VideoModel, resource: DownloadResource)
+    func clearDownloadsTapped()
 }
 
 protocol VideoListInteractorOutputProtocol: class {
     // INTERACTOR -> PRESENTER
     func didReceiveVideoListResponse(_ response: VideoListResponseModel)
     func didFailToReceiveVideoListResponse(error: VideoListAPIError)
+    func reloadDataModels(_ response: VideoListResponseModel)
 }
 
 //MARK:- DATA MANAGER PROTOCOLS

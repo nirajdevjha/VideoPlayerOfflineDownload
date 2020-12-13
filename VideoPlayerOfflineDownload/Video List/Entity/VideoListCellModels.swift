@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct VideoListCellModel: VideoListRowModel {
+class VideoListCellModel: VideoListRowModel {
     var type: VideoListRowModelType
     let videoModel: VideoModel
+    var cedric: Cedric
+    var resource: DownloadResource
     
+    init(type: VideoListRowModelType, videoModel: VideoModel, cedric: Cedric, resource: DownloadResource) {
+        self.type = type
+        self.videoModel = videoModel
+        self.cedric = cedric
+        self.resource = resource
+    }
 }

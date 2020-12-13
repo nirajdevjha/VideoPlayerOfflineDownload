@@ -15,13 +15,13 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
     let videoList: [VideoModel]
     weak var delegate: VideoListSectionProtocol?
     
-    init(sectionType: VideoListSectionType, section: Int, videoModels: [VideoModel], delegate: VideoListSectionProtocol?) {
+    init(sectionType: VideoListSectionType, section: Int, videoModels: [VideoModel], delegate: VideoListSectionProtocol?, cedric: Cedric) {
         self.sectionType = sectionType
         self.section = section
         self.rowModels = [VideoListRowModel]()
         self.delegate = delegate
         self.videoList = videoModels
-        prepareRowModels(from: videoModels)
+        prepareRowModels(from: videoModels, cedric: cedric)
     }
     
     func numberOfCells() -> Int {
@@ -35,11 +35,14 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
         return (rowModels[index], self)
     }
     
-    private func prepareRowModels(from videoModels: [VideoModel]) {
+    private func prepareRowModels(from videoModels: [VideoModel], cedric: Cedric) {
         rowModels.removeAll()
         for videoModel in videoModels {
-           let videoListModel = VideoListCellModel(type: .list, videoModel: videoModel)
-            rowModels.append(videoListModel)
+            if let videoUrlStr = videoModel.video , let videoUrl = URL(string: videoUrlStr), let title = videoModel.title {
+                let resource = DownloadResource(id: videoModel.id, source: videoUrl, destinationName: title + ".mp4")
+                let videoListModel = VideoListCellModel(type: .list, videoModel: videoModel, cedric: cedric, resource: resource)
+                rowModels.append(videoListModel)
+            }
         }
     }
     
@@ -50,5 +53,7 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
 }
 
 extension VideoListCardPresenter: VideoListCellDelegate {
-    
+    func startDownload(with videoModel: VideoModel, resource: DownloadResource) {
+        delegate?.startDownload(with: videoModel, resource: resource)
+    }
 }

@@ -20,6 +20,15 @@ class VideoListView: UIViewController {
         return activityIndicator
     }()
     
+    private lazy var clearDownloadsBtn: UIBarButtonItem = {
+        let button = UIButton(type: .custom)
+        button.setTitle("Clear Downloads", for: .normal)
+        button.setTitleColor(UIColor(red: 0/255, green: 140/255, blue: 255/255, alpha: 1.0), for: .normal)
+        button.addTarget(self, action: #selector(didTapClear), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: button)
+        return barButton
+    }()
+    
     var presenter: VideoListPresenterProtocol?
     
     
@@ -33,6 +42,7 @@ class VideoListView: UIViewController {
     
     private func setupViews() {
         title = "Video List"
+        navigationItem.rightBarButtonItem = clearDownloadsBtn
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -42,7 +52,11 @@ class VideoListView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
+    @objc
+    private func didTapClear() {
+        presenter?.clearDownloadsTapped()
+    }
 }
 
 extension VideoListView: VideoListViewProtocol {

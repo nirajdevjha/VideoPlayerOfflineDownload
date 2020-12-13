@@ -21,6 +21,15 @@ struct VideoListCellBuilder {
                 let cell: VideoListTVC = tableView.dequeueReuseCell(forIndexPath: indexPath)
                 cell.delegate = actionDelegate as? VideoListCardPresenter
                 cell.configure(from: cellViewModel)
+                cell.bindWith(downloadResource: cellViewModel.resource)
+                if let task = cellViewModel.cedric.downloadTask(forResource: cellViewModel.resource) {
+                    cell.bindWith(task: task)
+                }
+                
+                cellViewModel.cedric.addDelegate(cell)
+                cell.reuse = {  c in
+                    cellViewModel.cedric.removeDelegate(c)
+                }
                 return cell
             }
         }

@@ -16,12 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-Li-yAi" userLabel="VideoNameLbl">
-                        <rect key="frame" x="16" y="17" width="42" height="67"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-SZ-iJH">
+                        <rect key="frame" x="16" y="17" width="334" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYt-Li-yAi" userLabel="VideoNameLbl">
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhk-gW-dG2">
+                                <rect key="frame" x="0.0" y="21.5" width="334" height="45.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-JK-xwi">
                         <rect key="frame" x="0.0" y="101" width="414" height="1"/>
                         <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,22 +40,51 @@
                             <constraint firstAttribute="height" constant="1" id="alZ-Os-gqP"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="le7-IU-c4h" customClass="CircularProgressbarView" customModule="VideoPlayerOfflineDownload" customModuleProvider="target">
+                        <rect key="frame" x="360" y="28.5" width="44" height="44"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="9st-Wh-LCX"/>
+                            <constraint firstAttribute="width" constant="44" id="ThL-0a-ah4"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osh-St-9nk">
+                        <rect key="frame" x="360" y="28.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="I2E-dy-caM"/>
+                            <constraint firstAttribute="height" constant="44" id="RmI-y7-67c"/>
+                        </constraints>
+                        <state key="normal" image="downloadIcon"/>
+                        <connections>
+                            <action selector="didTapDownload:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nuA-lR-a36"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="U0l-SZ-iJH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="3GJ-fv-loY"/>
+                    <constraint firstItem="le7-IU-c4h" firstAttribute="top" secondItem="osh-St-9nk" secondAttribute="top" id="6jT-g8-CRa"/>
                     <constraint firstItem="mTO-JK-xwi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7E0-uc-Chr"/>
-                    <constraint firstItem="mTO-JK-xwi" firstAttribute="top" secondItem="dYt-Li-yAi" secondAttribute="bottom" constant="17" id="Dzw-Gp-tV3"/>
+                    <constraint firstAttribute="trailing" secondItem="le7-IU-c4h" secondAttribute="trailing" constant="10" id="Bcd-RA-6EN"/>
                     <constraint firstAttribute="trailing" secondItem="mTO-JK-xwi" secondAttribute="trailing" id="J29-Pm-eHk"/>
                     <constraint firstAttribute="bottom" secondItem="mTO-JK-xwi" secondAttribute="bottom" id="Y19-bt-qNW"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dYt-Li-yAi" secondAttribute="trailing" constant="16" id="jgm-xQ-lel"/>
-                    <constraint firstItem="dYt-Li-yAi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ucV-p2-AYC"/>
-                    <constraint firstItem="dYt-Li-yAi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="ynh-wy-h3S"/>
+                    <constraint firstItem="le7-IU-c4h" firstAttribute="centerY" secondItem="U0l-SZ-iJH" secondAttribute="centerY" id="fJL-jc-FfL"/>
+                    <constraint firstItem="osh-St-9nk" firstAttribute="leading" secondItem="U0l-SZ-iJH" secondAttribute="trailing" constant="10" id="fyj-F4-jod"/>
+                    <constraint firstAttribute="trailing" secondItem="osh-St-9nk" secondAttribute="trailing" constant="10" id="mRE-4C-BhF"/>
+                    <constraint firstItem="U0l-SZ-iJH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mmC-gO-Yzk"/>
+                    <constraint firstItem="mTO-JK-xwi" firstAttribute="top" secondItem="U0l-SZ-iJH" secondAttribute="bottom" constant="17" id="smR-Ve-1Z0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="downloadButton" destination="osh-St-9nk" id="niT-UI-KZF"/>
+                <outlet property="downloadProgressView" destination="le7-IU-c4h" id="kRc-hr-PNO"/>
+                <outlet property="taskStateLabel" destination="Zhk-gW-dG2" id="u2U-dL-HPb"/>
                 <outlet property="videoNameLbl" destination="dYt-Li-yAi" id="AMU-vK-upX"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="-38.169642857142854"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="downloadIcon" width="22" height="22"/>
+    </resources>
 </document>

@@ -32,6 +32,19 @@
 		4021E078258670D6002CE97F /* VideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E077258670D6002CE97F /* VideoDetailVC.swift */; };
 		4021E07A25867135002CE97F /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E07925867135002CE97F /* VideoDetailViewModel.swift */; };
 		4021E07D25867195002CE97F /* VideoPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E07C25867195002CE97F /* VideoPlayerItem.swift */; };
+		4021E08325868B13002CE97F /* Cedric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08225868B13002CE97F /* Cedric.swift */; };
+		4021E08525868B15002CE97F /* CedricConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08425868B15002CE97F /* CedricConfiguration.swift */; };
+		4021E08825868B18002CE97F /* CedricDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08725868B18002CE97F /* CedricDelegate.swift */; };
+		4021E08A25868B1B002CE97F /* DownloadedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08925868B1B002CE97F /* DownloadedFile.swift */; };
+		4021E08C25868B1E002CE97F /* ConcurrentArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08B25868B1E002CE97F /* ConcurrentArray.swift */; };
+		4021E08E25868B20002CE97F /* DownloadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08D25868B20002CE97F /* DownloadItem.swift */; };
+		4021E09025868B22002CE97F /* DownloadError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E08F25868B22002CE97F /* DownloadError.swift */; };
+		4021E09225868B24002CE97F /* DownloadsFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09125868B24002CE97F /* DownloadsFileManager.swift */; };
+		4021E09425868B26002CE97F /* DownloadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09325868B26002CE97F /* DownloadResource.swift */; };
+		4021E09625868B28002CE97F /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09525868B28002CE97F /* FileManagerExtensions.swift */; };
+		4021E09825868B2A002CE97F /* LimitedOperationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09725868B2A002CE97F /* LimitedOperationGroup.swift */; };
+		4021E09A25868B2D002CE97F /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09925868B2D002CE97F /* MulticastDelegate.swift */; };
+		4021E09D258697A7002CE97F /* CircularProgressbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09C258697A7002CE97F /* CircularProgressbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +87,22 @@
 		4021E077258670D6002CE97F /* VideoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailVC.swift; sourceTree = "<group>"; };
 		4021E07925867135002CE97F /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
 		4021E07C25867195002CE97F /* VideoPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerItem.swift; sourceTree = "<group>"; };
+		4021E08125868B10002CE97F /* Cedric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cedric.h; sourceTree = "<group>"; };
+		4021E08225868B13002CE97F /* Cedric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cedric.swift; sourceTree = "<group>"; };
+		4021E08425868B15002CE97F /* CedricConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CedricConfiguration.swift; sourceTree = "<group>"; };
+		4021E08625868B16002CE97F /* Cedric.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Cedric.xcconfig; sourceTree = "<group>"; };
+		4021E08725868B18002CE97F /* CedricDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CedricDelegate.swift; sourceTree = "<group>"; };
+		4021E08925868B1B002CE97F /* DownloadedFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedFile.swift; sourceTree = "<group>"; };
+		4021E08B25868B1E002CE97F /* ConcurrentArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentArray.swift; sourceTree = "<group>"; };
+		4021E08D25868B20002CE97F /* DownloadItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadItem.swift; sourceTree = "<group>"; };
+		4021E08F25868B22002CE97F /* DownloadError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadError.swift; sourceTree = "<group>"; };
+		4021E09125868B24002CE97F /* DownloadsFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsFileManager.swift; sourceTree = "<group>"; };
+		4021E09325868B26002CE97F /* DownloadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadResource.swift; sourceTree = "<group>"; };
+		4021E09525868B28002CE97F /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
+		4021E09725868B2A002CE97F /* LimitedOperationGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedOperationGroup.swift; sourceTree = "<group>"; };
+		4021E09925868B2D002CE97F /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		4021E09B25868B30002CE97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4021E09C258697A7002CE97F /* CircularProgressbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +148,7 @@
 				4021E074258670A5002CE97F /* Video Detail */,
 				4021E0642585D795002CE97F /* Utilities */,
 				4021E0692585D813002CE97F /* WebServiceManager */,
+				4021E07E25868AE3002CE97F /* Download Manager */,
 				4021E02525849313002CE97F /* AppDelegate.swift */,
 				4021E02725849313002CE97F /* SceneDelegate.swift */,
 				4021E02B25849313002CE97F /* Main.storyboard */,
@@ -160,6 +190,7 @@
 				4021E02925849313002CE97F /* VideoListView.swift */,
 				4021E06A258657E1002CE97F /* VideoListTVC.swift */,
 				4021E06B258657E1002CE97F /* VideoListTVC.xib */,
+				4021E09C258697A7002CE97F /* CircularProgressbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +304,28 @@
 			path = PlayerItem;
 			sourceTree = "<group>";
 		};
+		4021E07E25868AE3002CE97F /* Download Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4021E08125868B10002CE97F /* Cedric.h */,
+				4021E08225868B13002CE97F /* Cedric.swift */,
+				4021E08425868B15002CE97F /* CedricConfiguration.swift */,
+				4021E08625868B16002CE97F /* Cedric.xcconfig */,
+				4021E08725868B18002CE97F /* CedricDelegate.swift */,
+				4021E08925868B1B002CE97F /* DownloadedFile.swift */,
+				4021E08B25868B1E002CE97F /* ConcurrentArray.swift */,
+				4021E08D25868B20002CE97F /* DownloadItem.swift */,
+				4021E08F25868B22002CE97F /* DownloadError.swift */,
+				4021E09125868B24002CE97F /* DownloadsFileManager.swift */,
+				4021E09325868B26002CE97F /* DownloadResource.swift */,
+				4021E09525868B28002CE97F /* FileManagerExtensions.swift */,
+				4021E09725868B2A002CE97F /* LimitedOperationGroup.swift */,
+				4021E09925868B2D002CE97F /* MulticastDelegate.swift */,
+				4021E09B25868B30002CE97F /* Info.plist */,
+			);
+			path = "Download Manager";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,7 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4021E08E25868B20002CE97F /* DownloadItem.swift in Sources */,
 				4021E0682585D80E002CE97F /* WebserviceManager.swift in Sources */,
+				4021E09825868B2A002CE97F /* LimitedOperationGroup.swift in Sources */,
+				4021E09A25868B2D002CE97F /* MulticastDelegate.swift in Sources */,
 				4021E02A25849313002CE97F /* VideoListView.swift in Sources */,
 				4021E0562585C992002CE97F /* VideoListResponseModel.swift in Sources */,
 				4021E02625849313002CE97F /* AppDelegate.swift in Sources */,
@@ -383,18 +439,28 @@
 				4021E0632585D5C6002CE97F /* VideoListCardPresenter.swift in Sources */,
 				4021E0662585D7B2002CE97F /* UIView+Extensions.swift in Sources */,
 				4021E078258670D6002CE97F /* VideoDetailVC.swift in Sources */,
+				4021E08A25868B1B002CE97F /* DownloadedFile.swift in Sources */,
+				4021E08C25868B1E002CE97F /* ConcurrentArray.swift in Sources */,
+				4021E09425868B26002CE97F /* DownloadResource.swift in Sources */,
 				4021E05E2585CEB3002CE97F /* VideoListWireFrame.swift in Sources */,
 				4021E0532585C639002CE97F /* VideoListProtocols.swift in Sources */,
 				4021E0612585D3F7002CE97F /* VideoListCellBuilder.swift in Sources */,
+				4021E09025868B22002CE97F /* DownloadError.swift in Sources */,
 				4021E06C258657E1002CE97F /* VideoListTVC.swift in Sources */,
+				4021E08525868B15002CE97F /* CedricConfiguration.swift in Sources */,
 				4021E06F25865893002CE97F /* VideoListCellModels.swift in Sources */,
 				4021E05C2585CD83002CE97F /* VideoListInteractor.swift in Sources */,
 				4021E07A25867135002CE97F /* VideoDetailViewModel.swift in Sources */,
 				4021E07D25867195002CE97F /* VideoPlayerItem.swift in Sources */,
 				4021E02825849313002CE97F /* SceneDelegate.swift in Sources */,
+				4021E09625868B28002CE97F /* FileManagerExtensions.swift in Sources */,
 				4021E05A2585CC48002CE97F /* VideoListPresenter.swift in Sources */,
+				4021E09225868B24002CE97F /* DownloadsFileManager.swift in Sources */,
 				4021E07125865FF9002CE97F /* EncoderDecoder.swift in Sources */,
+				4021E08825868B18002CE97F /* CedricDelegate.swift in Sources */,
 				4021E0582585C9D2002CE97F /* VideoListDataManager.swift in Sources */,
+				4021E09D258697A7002CE97F /* CircularProgressbarView.swift in Sources */,
+				4021E08325868B13002CE97F /* Cedric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
