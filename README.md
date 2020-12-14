@@ -12,3 +12,6 @@ VIPER & MVVM
 ## Language 
 Swift 5.1
 
+## Download manager
+Using https://github.com/appunite/Cedric
+
