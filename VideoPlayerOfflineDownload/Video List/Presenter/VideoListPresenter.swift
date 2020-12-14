@@ -18,6 +18,7 @@ class VideoListPresenter: VideoListPresenterProtocol {
     private var sections = [VideoListCardPresenterProtocol]()
     
     func viewDidLoad() {
+        view?.showLoading()
         interactor?.fetchVideoListAPI()
     }
     

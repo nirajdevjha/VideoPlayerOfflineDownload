@@ -16,7 +16,7 @@ class VideoListView: UIViewController {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.style = .large
-        activityIndicator.color = .white
+        activityIndicator.color = .lightGray
         return activityIndicator
     }()
     
