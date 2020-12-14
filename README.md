@@ -15,7 +15,7 @@ Swift 5.1
 ## Download manager
 Using https://github.com/appunite/Cedric
 
-## Design pattern
+## Improvement Areas
 - Use core data instead of UserDefaults.
 - Can better handle offline mode.
 - Some code can be refactored.
