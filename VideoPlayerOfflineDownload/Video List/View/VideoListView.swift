@@ -22,7 +22,7 @@ class VideoListView: UIViewController {
     
     private lazy var clearDownloadsBtn: UIBarButtonItem = {
         let button = UIButton(type: .custom)
-        button.setTitle("Clear Downloads", for: .normal)
+        button.setTitle("Reset", for: .normal)
         button.setTitleColor(UIColor(red: 0/255, green: 140/255, blue: 255/255, alpha: 1.0), for: .normal)
         button.addTarget(self, action: #selector(didTapClear), for: .touchUpInside)
         let barButton = UIBarButtonItem(customView: button)

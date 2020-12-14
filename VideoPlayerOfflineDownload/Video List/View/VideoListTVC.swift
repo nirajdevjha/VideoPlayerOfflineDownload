@@ -36,8 +36,12 @@ class VideoListTVC: UITableViewCell {
     }
     
     func configure(from model: VideoListCellModel) {
-        self.videoModel = model.videoModel
+        videoModel = model.videoModel
         videoNameLbl.text = videoModel?.title
+        taskStateLabel.isHidden = false
+        taskStateLabel.text = "Not Downloaded"
+        downloadButton.isHidden = false
+        downloadProgressView.isHidden = true
     }
 
     @IBAction
@@ -54,7 +58,7 @@ extension VideoListTVC {
         if let url = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
             downloadButton.isHidden = true
             taskStateLabel.isHidden = false
-            taskStateLabel.text = "Completed"
+            taskStateLabel.text = "Downloaded"
         }
     }
     
@@ -99,8 +103,9 @@ extension VideoListTVC {
         do {
             let url = try file.url()
             downloadProgressView.isHidden = true
+            setUpTaskState("Downloaded")
         } catch let error {
-            taskStateLabel.text = error.localizedDescription
+            setUpTaskState(error.localizedDescription)
         }
     }
 }
