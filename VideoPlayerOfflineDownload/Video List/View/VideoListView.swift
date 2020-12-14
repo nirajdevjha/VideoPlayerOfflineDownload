@@ -79,7 +79,7 @@ extension VideoListView: VideoListViewProtocol {
     }
     
     func showErrorMsg(_ msg: String) {
-        
+        UIAlertController.showErrorMsgAlert(from: self, title: "OK", msg: msg, okHandler: nil)
     }
 }
 

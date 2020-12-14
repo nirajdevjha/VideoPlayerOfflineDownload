@@ -23,11 +23,14 @@ class VideoListInteractor: VideoListInteractorInputProtocol {
     }()
     
     func fetchVideoListAPI() {
-        if !retriveVideoListFromUserDefaults() {
-            remoteDatamanager?.fetchVideoListAPI(completion: { (result: Result<VideoListResponseModel, VideoListAPIError>) in
-                self.videoListResponseHandler(result)
-            })
+        //inter
+        guard ReachabilityManager.shared.checkNetworkConnection else {
+            retriveVideoListFromUserDefaults()
+            return
         }
+        remoteDatamanager?.fetchVideoListAPI(completion: { (result: Result<VideoListResponseModel, VideoListAPIError>) in
+            self.videoListResponseHandler(result)
+        })
     }
     
     func addVideoForDownload(video: VideoModel, resource: DownloadResource) {
@@ -61,6 +64,7 @@ extension VideoListInteractor {
         }
     }
     
+    @discardableResult
     private func retriveVideoListFromUserDefaults() -> Bool {
         do {
             let videoList = UserDefaults.standard.object(forKey: "videoList")

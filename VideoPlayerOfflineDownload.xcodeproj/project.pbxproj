@@ -45,6 +45,10 @@
 		4021E09825868B2A002CE97F /* LimitedOperationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09725868B2A002CE97F /* LimitedOperationGroup.swift */; };
 		4021E09A25868B2D002CE97F /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09925868B2D002CE97F /* MulticastDelegate.swift */; };
 		4021E09D258697A7002CE97F /* CircularProgressbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09C258697A7002CE97F /* CircularProgressbarView.swift */; };
+		4021E0A025874533002CE97F /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E09F25874533002CE97F /* NetworkReachabilityManager.swift */; };
+		4021E0A22587453B002CE97F /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0A12587453B002CE97F /* ReachabilityManager.swift */; };
+		4021E0A425874738002CE97F /* Protector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0A325874738002CE97F /* Protector.swift */; };
+		4021E0A7258747AC002CE97F /* UIAlertController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E0A6258747AC002CE97F /* UIAlertController+Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		4021E09925868B2D002CE97F /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		4021E09B25868B30002CE97F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4021E09C258697A7002CE97F /* CircularProgressbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressbarView.swift; sourceTree = "<group>"; };
+		4021E09F25874533002CE97F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		4021E0A12587453B002CE97F /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		4021E0A325874738002CE97F /* Protector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protector.swift; sourceTree = "<group>"; };
+		4021E0A6258747AC002CE97F /* UIAlertController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Error.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,7 @@
 				4021E0642585D795002CE97F /* Utilities */,
 				4021E0692585D813002CE97F /* WebServiceManager */,
 				4021E07E25868AE3002CE97F /* Download Manager */,
+				4021E09E25874521002CE97F /* Reachability */,
 				4021E02525849313002CE97F /* AppDelegate.swift */,
 				4021E02725849313002CE97F /* SceneDelegate.swift */,
 				4021E02B25849313002CE97F /* Main.storyboard */,
@@ -257,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				4021E0652585D7B2002CE97F /* UIView+Extensions.swift */,
+				4021E0A6258747AC002CE97F /* UIAlertController+Error.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -324,6 +334,16 @@
 				4021E09B25868B30002CE97F /* Info.plist */,
 			);
 			path = "Download Manager";
+			sourceTree = "<group>";
+		};
+		4021E09E25874521002CE97F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4021E0A325874738002CE97F /* Protector.swift */,
+				4021E09F25874533002CE97F /* NetworkReachabilityManager.swift */,
+				4021E0A12587453B002CE97F /* ReachabilityManager.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,8 +454,10 @@
 				4021E09A25868B2D002CE97F /* MulticastDelegate.swift in Sources */,
 				4021E02A25849313002CE97F /* VideoListView.swift in Sources */,
 				4021E0562585C992002CE97F /* VideoListResponseModel.swift in Sources */,
+				4021E0A7258747AC002CE97F /* UIAlertController+Error.swift in Sources */,
 				4021E02625849313002CE97F /* AppDelegate.swift in Sources */,
 				4021E03025849313002CE97F /* VideoPlayerOfflineDownload.xcdatamodeld in Sources */,
+				4021E0A425874738002CE97F /* Protector.swift in Sources */,
 				4021E0632585D5C6002CE97F /* VideoListCardPresenter.swift in Sources */,
 				4021E0662585D7B2002CE97F /* UIView+Extensions.swift in Sources */,
 				4021E078258670D6002CE97F /* VideoDetailVC.swift in Sources */,
@@ -446,6 +468,7 @@
 				4021E0532585C639002CE97F /* VideoListProtocols.swift in Sources */,
 				4021E0612585D3F7002CE97F /* VideoListCellBuilder.swift in Sources */,
 				4021E09025868B22002CE97F /* DownloadError.swift in Sources */,
+				4021E0A025874533002CE97F /* NetworkReachabilityManager.swift in Sources */,
 				4021E06C258657E1002CE97F /* VideoListTVC.swift in Sources */,
 				4021E08525868B15002CE97F /* CedricConfiguration.swift in Sources */,
 				4021E06F25865893002CE97F /* VideoListCellModels.swift in Sources */,
@@ -457,6 +480,7 @@
 				4021E05A2585CC48002CE97F /* VideoListPresenter.swift in Sources */,
 				4021E09225868B24002CE97F /* DownloadsFileManager.swift in Sources */,
 				4021E07125865FF9002CE97F /* EncoderDecoder.swift in Sources */,
+				4021E0A22587453B002CE97F /* ReachabilityManager.swift in Sources */,
 				4021E08825868B18002CE97F /* CedricDelegate.swift in Sources */,
 				4021E0582585C9D2002CE97F /* VideoListDataManager.swift in Sources */,
 				4021E09D258697A7002CE97F /* CircularProgressbarView.swift in Sources */,

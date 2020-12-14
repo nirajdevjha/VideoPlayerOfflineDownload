@@ -42,6 +42,10 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
                 if let url = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
                   localVideoUrl = url
                 }
+                //in offline mode, add only downloaded cell models
+                if localVideoUrl == nil && !ReachabilityManager.shared.checkNetworkConnection {
+                    continue
+                }
                 let videoListModel = VideoListCellModel(type: .list, videoModel: videoModel, cedric: cedric, resource: resource, localVideoUrl: localVideoUrl)
                 rowModels.append(videoListModel)
             }
@@ -60,5 +64,17 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
 extension VideoListCardPresenter: VideoListCellDelegate {
     func startDownload(with videoModel: VideoModel, resource: DownloadResource) {
         delegate?.startDownload(with: videoModel, resource: resource)
+    }
+    
+    func updateDownloadedVideoURl(url: URL, videoId: String?) {
+        let filteredRowModel = rowModels.filter { rowModel -> Bool in
+            if let rowModel = rowModel as? VideoListCellModel {
+                return rowModel.videoModel.id == videoId
+            }
+            return false
+        }.first
+        if let filteredRowModel = filteredRowModel as? VideoListCellModel {
+            filteredRowModel.localVideoUrl = url
+        }
     }
 }

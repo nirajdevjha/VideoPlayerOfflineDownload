@@ -7,16 +7,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F0C927D-96A4-42A2-BFC7-4024E3F76692"
+            uuid = "6F93986F-EBDB-44F5-B01D-602093902499"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoPlayerOfflineDownload/Video Detail/View Model/VideoDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(videoModel:localVideoUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FD5B664-59B5-433C-841E-95E5291CE504"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoPlayerOfflineDownload/Video List/View/VideoListTVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "bindWith(downloadedFile:)"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "bindWith(task:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D63B5DE2-81F5-4F1E-8516-1A675608597A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoPlayerOfflineDownload/Video List/Presenter/VideoListCardPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "updateDownloadedVideoURl(url:videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D63B5DE2-81F5-4F1E-8516-1A675608597A - 8edb06ca2fc3b836"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VideoPlayerOfflineDownload.VideoListCardPresenter.updateDownloadedVideoURl(url: Foundation.URL, videoId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "VideoPlayerOfflineDownload"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmt8120/Documents/UNC/VideoPlayerOfflineDownload/VideoPlayerOfflineDownload/Video%20List/Presenter/VideoListCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "D63B5DE2-81F5-4F1E-8516-1A675608597A - a609fd9303059666"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (VideoPlayerOfflineDownload.VideoListRowModel) -&gt; Swift.Bool in VideoPlayerOfflineDownload.VideoListCardPresenter.updateDownloadedVideoURl(url: Foundation.URL, videoId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "VideoPlayerOfflineDownload"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmt8120/Documents/UNC/VideoPlayerOfflineDownload/VideoPlayerOfflineDownload/Video%20List/Presenter/VideoListCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "138">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A09B7A6D-C297-4723-9A32-81122FAB8146"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoPlayerOfflineDownload/Video List/View/VideoListTVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "cedric(_:didFinishDownloadingResource:toFile:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB5883CF-E1CA-4AEF-9777-A68551F3D87E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoPlayerOfflineDownload/Video List/Presenter/VideoListCardPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "updateDownloadedVideoURl(url:videoId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF3E0FEC-B4BB-4F64-B58C-3709D6498AD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VideoPlayerOfflineDownload/Video List/Presenter/VideoListCardPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "didSelectCellAtIndexpath(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,6 +10,7 @@ import UIKit
 
 protocol VideoListCellDelegate: class {
     func startDownload(with videoModel: VideoModel, resource: DownloadResource)
+    func updateDownloadedVideoURl(url: URL, videoId: String?)
 }
 
 class VideoListTVC: UITableViewCell {
@@ -24,6 +25,7 @@ class VideoListTVC: UITableViewCell {
     private var videoModel: VideoModel?
     var resource: DownloadResource!
     var reuse: ((VideoListTVC) -> Void)?
+    
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +44,10 @@ class VideoListTVC: UITableViewCell {
         taskStateLabel.text = "Not Downloaded"
         downloadButton.isHidden = false
         downloadProgressView.isHidden = true
+        if !ReachabilityManager.shared.checkNetworkConnection {
+            downloadButton.isHidden = true
+             downloadProgressView.isHidden = true
+        }
     }
 
     @IBAction
@@ -101,7 +107,7 @@ extension VideoListTVC {
     fileprivate func bindWith(downloadedFile file: DownloadedFile) {
         downloadProgressView.isHidden = true
         do {
-            let url = try file.url()
+            let _ = try file.url()
             downloadProgressView.isHidden = true
             setUpTaskState("Downloaded")
         } catch let error {
@@ -124,6 +130,9 @@ extension VideoListTVC: CedricDelegate {
     func cedric(_ cedric: Cedric, didFinishDownloadingResource resource: DownloadResource, toFile file: DownloadedFile) {
         guard resource == self.resource else { return }
         bindWith(downloadedFile: file)
+        if let url = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
+              delegate?.updateDownloadedVideoURl(url: url, videoId: videoModel?.id)
+        }
     }
 }
 
