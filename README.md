@@ -16,6 +16,7 @@ Swift 5.1
 Using https://github.com/appunite/Cedric
 
 ## Design pattern
-Use core data instead of UserDefaults as it will help to manager large amount data.
-Can better handle offline mode.
+- Use core data instead of UserDefaults.
+- Can better handle offline mode.
+- Some code can be refactored.
 
