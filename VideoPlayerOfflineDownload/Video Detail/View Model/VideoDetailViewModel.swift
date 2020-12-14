@@ -10,9 +10,11 @@ import Foundation
 
 class VideoDetailViewModel {
     private let videoModel: VideoModel
+    private let localVideoUrl: URL?
     
-    init(videoModel: VideoModel) {
+    init(videoModel: VideoModel, localVideoUrl: URL?) {
         self.videoModel = videoModel
+        self.localVideoUrl = localVideoUrl
     }
     
     var navigationTitle: String {
@@ -20,6 +22,10 @@ class VideoDetailViewModel {
     }
     
     func getVideoUrl() -> URL? {
+        // if localVideoUrl, feed this to player
+        if let localVideoUrl = localVideoUrl {
+            return localVideoUrl
+        }
         guard let videoUrlStr = videoModel.video,
             let videoUrl = URL(string: videoUrlStr) else {
                 return nil

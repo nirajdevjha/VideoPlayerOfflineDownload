@@ -22,13 +22,10 @@ class VideoListPresenter: VideoListPresenterProtocol {
     }
     
     func viewWillAppear() {
-        
     }
     
     func viewWillDisappear() {
-        
     }
-    
     
     func numberOfSections() -> Int {
         return sections.count
@@ -71,7 +68,7 @@ class VideoListPresenter: VideoListPresenterProtocol {
         let videoListCardPresenter = VideoListCardPresenter(sectionType: .videoList, section: 0, videoModels: videoModels, delegate: self, cedric: interactor.cedric)
         sections.append(videoListCardPresenter)
     }
-    
+
 }
 
 //MARK:- Interactor Output Methods
@@ -102,11 +99,11 @@ extension VideoListPresenter: VideoListInteractorOutputProtocol {
 }
 
 extension VideoListPresenter: VideoListSectionProtocol {
-    func openVideoDetail(video: VideoModel) {
+    func openVideoDetail(video: VideoModel, localVideoUrl: URL?) {
         guard let view = view else {
             return
         }
-        let videoDetailVM = VideoDetailViewModel(videoModel: video)
+        let videoDetailVM = VideoDetailViewModel(videoModel: video, localVideoUrl: localVideoUrl)
         wireFrame?.openVideoDetail(view: view, viewModel: videoDetailVM)
     }
     

@@ -39,8 +39,8 @@ class VideoListDataManager: VideoListDataManagerProtocol {
     }
     
     func buildVideoListResource() -> Resource<VideoListResponseModel>? {
-        let scanURL: String = "https://www.mocky.io/v2/5ec2a6b32f000086e3c354fb"
-        guard let url = URL(string: scanURL) else { return nil }
+        let listUrl: String = "https://www.mocky.io/v2/5ec2a6b32f000086e3c354fb"
+        guard let url = URL(string: listUrl) else { return nil }
         
         let resource = Resource<VideoListResponseModel>(url: url, parseJSON: { json in
             do {

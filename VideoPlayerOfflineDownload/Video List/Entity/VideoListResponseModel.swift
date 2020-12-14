@@ -10,7 +10,7 @@ import Foundation
 
 typealias VideoListResponseModel = [VideoModel]
 
-struct VideoModel: Decodable {
+struct VideoModel: Codable {
     let id: String
     let title: String?
     let video: String?

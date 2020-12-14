@@ -31,8 +31,6 @@ class VideoListView: UIViewController {
     
     var presenter: VideoListPresenterProtocol?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         VideoListWireFrame.createVideoListModule(videoListRef: self)

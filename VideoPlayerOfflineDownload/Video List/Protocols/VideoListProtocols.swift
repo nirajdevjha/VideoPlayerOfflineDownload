@@ -11,7 +11,7 @@ import UIKit
 
 //MARK:- SECTION PROTOCOLS
 protocol VideoListSectionProtocol: class {
-    func openVideoDetail(video: VideoModel)
+    func openVideoDetail(video: VideoModel, localVideoUrl: URL?)
     func startDownload(with videoModel: VideoModel, resource: DownloadResource)
 }
 

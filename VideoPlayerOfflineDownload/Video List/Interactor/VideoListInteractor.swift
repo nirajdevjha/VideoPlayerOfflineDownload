@@ -23,9 +23,11 @@ class VideoListInteractor: VideoListInteractorInputProtocol {
     }()
     
     func fetchVideoListAPI() {
-        remoteDatamanager?.fetchVideoListAPI(completion: { (result: Result<VideoListResponseModel, VideoListAPIError>) in
-            self.videoListResponseHandler(result)
-        })
+        if !retriveVideoListFromUserDefaults() {
+            remoteDatamanager?.fetchVideoListAPI(completion: { (result: Result<VideoListResponseModel, VideoListAPIError>) in
+                self.videoListResponseHandler(result)
+            })
+        }
     }
     
     func addVideoForDownload(video: VideoModel, resource: DownloadResource) {
@@ -41,7 +43,6 @@ class VideoListInteractor: VideoListInteractorInputProtocol {
         guard let videoListResponse = videoListResponse else { return }
         presenter?.reloadDataModels(videoListResponse)
     }
-    
 }
 
 //MARK:- Private
@@ -50,9 +51,31 @@ extension VideoListInteractor {
         switch result {
         case .success(let responseModel):
             videoListResponse = responseModel
+            //Storing videoListResponse in user defaults
+            if let encoded = try? JSONEncoder().encode(videoListResponse) {
+                UserDefaults.standard.set(encoded, forKey: "videoList")
+            }
             presenter?.didReceiveVideoListResponse(responseModel)
         case .failure(let error):
             presenter?.didFailToReceiveVideoListResponse(error: error)
+        }
+    }
+    
+    private func retriveVideoListFromUserDefaults() -> Bool {
+        do {
+            let videoList = UserDefaults.standard.object(forKey: "videoList")
+            if videoList == nil {
+                return false
+            }
+            let responseModel = try JSONDecoder().decode(VideoListResponseModel.self, from: videoList as! Data)
+            videoListResponse = responseModel
+            if let videoListResponse = videoListResponse {
+                presenter?.didReceiveVideoListResponse(videoListResponse)
+            }
+            return true
+        } catch let err {
+            debugPrint(err)
+            return false
         }
     }
 }

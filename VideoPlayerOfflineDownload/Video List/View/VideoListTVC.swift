@@ -55,7 +55,7 @@ extension VideoListTVC {
     func bindWith(downloadResource resource: DownloadResource) {
         downloadProgressView.isHidden = true
         self.resource = resource
-        if let url = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
+        if let _ = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
             downloadButton.isHidden = true
             taskStateLabel.isHidden = false
             taskStateLabel.text = "Downloaded"

@@ -12,7 +12,6 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
     var sectionType: VideoListSectionType
     var section: Int
     private var rowModels: [VideoListRowModel]
-    let videoList: [VideoModel]
     weak var delegate: VideoListSectionProtocol?
     
     init(sectionType: VideoListSectionType, section: Int, videoModels: [VideoModel], delegate: VideoListSectionProtocol?, cedric: Cedric) {
@@ -20,7 +19,6 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
         self.section = section
         self.rowModels = [VideoListRowModel]()
         self.delegate = delegate
-        self.videoList = videoModels
         prepareRowModels(from: videoModels, cedric: cedric)
     }
     
@@ -40,15 +38,22 @@ class VideoListCardPresenter: VideoListCardPresenterProtocol {
         for videoModel in videoModels {
             if let videoUrlStr = videoModel.video , let videoUrl = URL(string: videoUrlStr), let title = videoModel.title {
                 let resource = DownloadResource(id: videoModel.id, source: videoUrl, destinationName: title + ".mp4")
-                let videoListModel = VideoListCellModel(type: .list, videoModel: videoModel, cedric: cedric, resource: resource)
+                var localVideoUrl: URL?
+                if let url = FileManager.cedricPath(forResourceWithName: resource.destinationName) {
+                  localVideoUrl = url
+                }
+                let videoListModel = VideoListCellModel(type: .list, videoModel: videoModel, cedric: cedric, resource: resource, localVideoUrl: localVideoUrl)
                 rowModels.append(videoListModel)
             }
         }
     }
     
     func didSelectCellAtIndexpath(_ indexPath: IndexPath) {
-        guard indexPath.row < videoList.count else { return }
-        delegate?.openVideoDetail(video: videoList[indexPath.row])
+        guard indexPath.row < rowModels.count else { return }
+        let rowModel = rowModels[indexPath.row]
+        if let rowModel = rowModel as? VideoListCellModel {
+            delegate?.openVideoDetail(video: rowModel.videoModel, localVideoUrl: rowModel.localVideoUrl)
+        }
     }
 }
 
