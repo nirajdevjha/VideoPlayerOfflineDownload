@@ -23,13 +23,13 @@ class VideoListInteractor: VideoListInteractorInputProtocol {
     }()
     
     func fetchVideoListAPI() {
-        //inter
+        //check for internet
         guard ReachabilityManager.shared.checkNetworkConnection else {
             retriveVideoListFromUserDefaults()
             return
         }
-        remoteDatamanager?.fetchVideoListAPI(completion: { (result: Result<VideoListResponseModel, VideoListAPIError>) in
-            self.videoListResponseHandler(result)
+        remoteDatamanager?.fetchVideoListAPI(completion: { [weak self] result in
+            self?.videoListResponseHandler(result)
         })
     }
     
